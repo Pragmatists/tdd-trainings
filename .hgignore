@@ -1,0 +1,13 @@
+
+syntax: regexp
+^employee/target$
+syntax: regexp
+^snow-mocks/target$
+syntax: regexp
+^CdPlayer/target$
+syntax: regexp
+^calculator/target$
+syntax: regexp
+\.project$
+syntax: regexp
+^\.settings$
