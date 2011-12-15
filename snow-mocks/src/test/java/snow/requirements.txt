@@ -1,0 +1,21 @@
+1. Send a sander only if a temperature gets below 0
+
+2. Send snowplow only if the snowfall exceeds 3 mm
+	2a) if a plow fails (SnowplowMalfunctioningException) - send another one
+
+3. Send 2 plows if the snowfall exceeds 5 mm
+
+4. If the temperature get below -10 and the snowfall exceeds 10mm, 
+	first send 3 plows, 
+	then a sander, 
+	and then let the newspapers know what happens
+
+	
+	External systems:
+		WeatherForecastService
+		MunicipalServices
+		PressService
+
+
+	What should be implemented:
+	SnowRescueService.checkForecastAndRescue
