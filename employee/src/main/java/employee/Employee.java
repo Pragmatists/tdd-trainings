@@ -1,5 +1,7 @@
 package employee;
 
+import java.util.*;
+
 public class Employee {
 	private Type type;
 	private double base;
@@ -11,21 +13,23 @@ public class Employee {
 		SALES, HR, WORKER, CEO
 	}
 
+	private Map<Type, SalaryCalculator> calculators = new HashMap<Employee.Type, SalaryCalculator>();
+
+	public Employee() {
+		calculators.put(Type.CEO, new CeoCalculator());
+		calculators.put(Type.HR, new HrSalaryCalculator());
+		calculators.put(Type.SALES, new SalesCalculator());
+		calculators.put(Type.WORKER, new WorkerSalaryCalculator());
+	}
+
 	public double getSalary() {
-		switch (type) {
-		case SALES:
-			return getBase() + getAchievementsFactor() * getAchievements()
-			        + getCompanyResult() * 0.0000001;
-		case HR:
-			return getBase() + getCompanyResult() * 0.0000002;
-		case WORKER:
-			return getBase();
-		case CEO:
-			return getBase() + getAchievements() * getAchievementsFactor()
-			        + getCompanyResult() * 0.01;
-		default:
-			throw new IllegalStateException("Employee type unspecified");
+		if (calculators.containsKey(type))
+		{
+			return calculators.get(type).getSalary(this);
 		}
+		else
+			throw new IllegalStateException("Employee type unspecified");
+
 	}
 
 	public void setType(Type type) {
