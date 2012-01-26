@@ -15,11 +15,6 @@ public class Display {
 		return result;
 	}
 
-	private void display(String[] result) {
-		for (int level = 0; level < 4; level++)
-			System.out.println(result[level]);
-	}
-
 	private String delegateLevelBuilding(String numbers, int level) {
 		String result = "";
 		for (Character character : numbers.toCharArray()) {
