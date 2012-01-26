@@ -6,6 +6,6 @@
     <version>1.0</version>
   </parent>
   <groupId>tdd-training</groupId>
-  <artifactId>displayer</artifactId>
+  <artifactId>Displayer</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 </project>

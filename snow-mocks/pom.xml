@@ -1,11 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>tdd-training</groupId>
-  <artifactId>snow-mocks</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-<parent>
-    <artifactId>examples</artifactId>
-    <groupId>pragmatists.tdd-training</groupId>
-    <version>1.0</version>
-  </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>examples</artifactId>
+		<groupId>pragmatists.tdd-training</groupId>
+		<version>1.0</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>tdd-training</groupId>
+	<artifactId>SnowMocks</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 </project>
