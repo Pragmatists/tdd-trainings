@@ -9,3 +9,5 @@ syntax: regexp
 
 syntax: regexp
 ^CdPlayer/bin$
+syntax: regexp
+^Stack/bin$
