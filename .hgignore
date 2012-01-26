@@ -6,8 +6,5 @@ syntax: regexp
 \.settings$
 syntax: regexp
 \.classpath$
-
 syntax: regexp
-^CdPlayer/bin$
-syntax: regexp
-^Stack/bin$
+bin$
