@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>examples</artifactId>
+		<groupId>pragmatists.tdd-training</groupId>
+		<version>1.0</version>
+	</parent>
+	<groupId>tdd-training</groupId>
+	<artifactId>ATM</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<dependencies>
+		<dependency>
+			<groupId>pl.pragmatists.tumbler</groupId>
+			<artifactId>tumbler</artifactId>
+			<version>0.4.1</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.11</version>
+				<configuration>
+					<useFile>false</useFile>
+					<systemProperties>
+						<property>
+							<name>generateReport</name>
+							<value>html</value>
+						</property>
+					</systemProperties>
+					<includes>
+						<include>**/*Scenarios.java</include>
+					</includes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
