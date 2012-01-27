@@ -7,6 +7,6 @@
 		<version>1.0</version>
 	</parent>
 	<groupId>tdd-training</groupId>
-	<artifactId>Stack</artifactId>
+	<artifactId>CodeAnalyzer</artifactId>
 	<version>1.0-SNAPSHOT</version>
 </project>
