@@ -1,16 +1,19 @@
-package employee;
+package pl.pragmatists.refactoring.employee;
 
-import static employee.Employee.Type.*;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-import org.junit.*;
+import org.junit.Test;
 
-public class EmployeeTest {
+import pl.pragmatists.refactoring.employee.Employee.Type;
+
+
+
+public class EmployeePaidByAchievementsTest {
 	@Test
 	public void shouldCalculateSalaryForCEO() {
 		// given
 		Employee ceo = new Employee();
-		ceo.setType(CEO);
+		ceo.setType(Type.CEO);
 		ceo.setBase(100);
 		ceo.setCompanyResult(100);
 		ceo.setAchievements(1);
@@ -27,7 +30,7 @@ public class EmployeeTest {
 	public void shouldCalculateSalaryForSales() {
 		// given
 		Employee sales = new Employee();
-		sales.setType(SALES);
+		sales.setType(Type.SALES);
 		sales.setBase(100);
 		sales.setCompanyResult(100);
 		sales.setAchievements(1);
@@ -44,7 +47,7 @@ public class EmployeeTest {
 	public void shouldCalculateSalaryForHR() {
 		// given
 		Employee hr = new Employee();
-		hr.setType(HR);
+		hr.setType(Type.HR);
 		hr.setBase(100);
 		hr.setCompanyResult(100);
 
@@ -59,7 +62,7 @@ public class EmployeeTest {
 	public void shouldCalculateSalaryForWorker() {
 		// given
 		Employee hr = new Employee();
-		hr.setType(WORKER);
+		hr.setType(Type.WORKER);
 		hr.setBase(100);
 
 		// when
