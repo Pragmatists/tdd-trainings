@@ -1,4 +1,4 @@
-package pl.mimuw.tdd.codeanalyzer;
+package pl.pragmatists.tdd.codeanalyzer;
 
 import static org.junit.Assert.*;
 
