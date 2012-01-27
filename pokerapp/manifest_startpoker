@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Sealed: true
+Main-Class: net/sourceforge/pokerapp/StartPoker
+
+Name: net/sourceforge/pokerapp/
+Sealed: true
+Specification-Title: "PokerApp"
+Specification-Version: "1.00"
+Specification-Vender: "SourceForge.net"
+
+Name: net/sourceforge/pokerapp/Games/
+Sealed: false
+
+Name: net/sourceforge/pokerapp/AI/
+Sealed: false

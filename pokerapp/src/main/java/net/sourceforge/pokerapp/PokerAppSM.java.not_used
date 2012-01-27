@@ -1,0 +1,105 @@
+/******************************************************************************************
+ * PokerAppSM.java           PokerApp                                                     *
+ *                                                                                        *
+ *   Revision History                                                                     *
+ * +---------+----------+---------------------------------------------------------------+ *
+ * | Version | DATE     | Description                                                   | *
+ * +---------+----------+---------------------------------------------------------------+ *
+ * |  0.95   | 08/10/04 | Initial documented release                                    | *
+ * |  1.00   | 07/09/07 | Prepare for open source.  Header/comments/package/etc...      | *
+ * +---------+----------+---------------------------------------------------------------+ *
+ *                                                                                        *
+ * PokerApp Copyright (C) 2004  Dan Puperi                                                *
+ *                                                                                        *
+ *   This program is free software: you can redistribute it and/or modify                 *
+ *   it under the terms of the GNU General Public License as published by                 *
+ *   the Free Software Foundation, either version 3 of the License, or                    *
+ *   (at your option) any later version.                                                  *
+ *                                                                                        *
+ *   This program is distributed in the hope that it will be useful,                      *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of                       *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                        *
+ *   GNU General Public License for more details.                                         *
+ *                                                                                        *
+ *   You should have received a copy of the GNU General Public License                    *
+ *   along with this program.  If not, see <http://www.gnu.org/licenses/>                 *
+ *                                                                                        *
+ ******************************************************************************************/
+
+package net.sourceforge.pokerapp;
+
+import java.io.*;
+
+/****************************************************
+ * PokerAppSM is the security manager for the PokerApp application.  It will control 
+ * what the PokerApp application can do and more importantly what its not allowed to do.
+ * Currently is not being used because I couldn't get it to work correctly.
+ **/
+public class PokerAppSM extends SecurityManager {
+
+/***************************
+ * The default constructor creates a new instance of this security manager
+ **/
+    public PokerAppSM() {
+        super();
+    }
+
+/***************************
+ * Overridden checkExit() function.  Allow application to exit
+ * 
+ * @param status The exit status
+ *
+ **/
+    public void checkExit( int status ) {}
+
+/***************************
+ * Overridden checkAccept() function.  Needed for sockets to be created.
+ * 
+ * @param host The host name of the socket connection.
+ * @param port The port number of the socket connection
+ *
+ **/
+    public void checkAccept( String host, int port ) { }
+
+/***************************
+ * Overridden checkConnect() function.  Needed for sockets to be created.
+ * 
+ * @param host The host name of the socket connection.
+ * @param port The port number of the socket connection
+ *
+ **/
+    public void checkConnect( String host, int port )  { }
+
+/***************************
+ * Overridden checkListen() function.  Needed to be able to listen to sockets.
+ * 
+ * @param port The port number of the socket connection
+ *
+ **/
+    public void checkListen( int port )  { }
+
+/***************************
+ * Overridden checkRead() function.  Needed so the Applet can read files.
+ * 
+ * @param fd The system-dependent file descriptor 
+ *
+ **/
+    public void checkRead( FileDescriptor fd ) { }
+
+/***************************
+ * Overridden checkRead() function.  Needed so the Applet can read files.
+ *
+ * @param file The system-dependent file name 
+ *
+ **/
+    public void checkRead( String file ) { }
+
+/***************************
+ * Overridden checkRead() function.  Needed so the Applet can read files.
+ * 
+ * @param file The system-dependent filename.
+ * @param context A system-dependent security context 
+ *
+ **/
+    public void checkRead( String file, Object context ) { }
+}

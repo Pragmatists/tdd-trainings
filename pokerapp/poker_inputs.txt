@@ -1,0 +1,109 @@
+# Inputs for PokerApp
+# PokerApp version 1.00
+#
+# This input file is used to control the inputs into PokerApp.  Each section
+# has an identifier, under which are the available options.  The data lines
+# consist of a label and a class name, separated by a comma - or they consist
+# of a variable name and a value.
+#
+#
+#
+# RULES
+antes = false
+blinds = true
+noLimit = false
+betLimit = false
+potLimit = false
+maximumBet = 100.00
+kickPlayer = false
+kickTimeout = 30
+startingCash = 1000.00
+button1Val = 5.00
+button2Val = 10.00
+button3Val = 25.00
+button4Val = 100.00
+ante = 5.00
+smallBlind = 5.00
+minimumBet = 10.00
+autoDoubleTime = false
+timeToDouble = 600
+autoDoubleHands = false
+handsToDouble = 15
+#
+# GAMES
+Texas Hold'em                               ,  TexasHoldEm
+Pineapple                                   ,  Pineapple
+Crazy Pineapple                             ,  CrazyPineapple
+Omaha Hold'em                               ,  OmahaHoldEm
+Omaha 8 High / Low Split                    ,  Omaha8
+Omaha Hold'em with Shipwreck                ,  OmahaShipwreck
+Iron Cross                                  ,  IronCross
+Iron Cross with the A-Mod                   ,  IronCrossAMod
+Iron Cross with Wild Center                 ,  IronCrossWildCenter
+Seven Card Stud                             ,  SevenCardStud
+Seven Card Stud with Shipwreck              ,  Shipwreck
+Seven Card Stud Low Chicago                 ,  LowChicago
+Seven Card Stud High Chicago with Shipwreck ,  HighChicagoShipwreck
+Hide the Salami                             ,  HideTheSalami
+Five Card Stud                              ,  FiveCardStud
+Five Card Stud with Shipwreck               ,  FiveCardShipwreck
+Five Card Draw                              ,  FiveCardDraw
+Anaconda                                    ,  Anaconda
+#
+# AI
+Simple AI                                   ,  AILogic_simple
+#
+# CARDBACKS
+#    Card images are 71x96 (W x H) pixels
+#
+Red Bicycle     , Images/back_red_bicycle.gif
+Blue Arrow      , Images/back_blue_arrow.gif
+Red Casino      , Images/back_red_casino.gif
+Blue Casino     , Images/back_blue_casino.gif
+Suit Checkers   , Images/back_checker_suits.gif
+#
+# TABLEIMGS
+#    Table images are 900x445 (W x H) pixels
+#
+Purple          , Images/table_purple.gif
+Green           , Images/table_green.gif
+Red             , Images/table_red.gif
+Blue            , Images/table_blue.gif
+Black           , Images/table_black.gif
+#
+# CLIENTOPTIONS
+hideHoleCards = false
+muckLosingHands = true
+oneClickCheckCall = true
+#
+# APPLETOPTIONS
+#server = server:port
+#
+#
+# DEALER
+#   dealGame = gameName where gameName must be exactly the same as it is
+#              listed after the comma under the GAMES heading above.
+autoDealing = false
+dealGame = TexasHoldEm
+#dealGame = Pineapple
+#dealGame = CrazyPineapple
+#dealGame = OmahaHoldEm
+#dealGame = Omaha8
+#dealGame = OmahaShipwreck
+#dealGame = IronCross
+#dealGame = IronCrossAMod
+#dealGame = IronCrossWildCenter
+#dealGame = SevenCardStud
+#dealGame = Shipwreck
+#dealGame = LowChicago
+#dealGame = HighChicagoShipwreck
+#dealGame = HideTheSalami
+#dealGame = FiveCardStud
+#dealGame = FiveCardShipwreck
+#dealGame = FiveCardDraw
+#dealGame = Anaconda
+#
+# LOGGING
+logging = true
+keepLogFile = true
+logLevel = 5

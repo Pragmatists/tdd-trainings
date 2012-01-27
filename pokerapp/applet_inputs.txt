@@ -1,0 +1,32 @@
+# Inputs for PokerApplet
+# PokerApp version 1.00
+#
+# This input file is used to control the inputs into PokerApplet.
+# This file is not interchangeable with poker_inputs.txt
+#
+#
+#
+# CARDBACKS
+#    Card images are 71x96 (W x H) pixels
+#
+Red Bicycle     , Images/back_red_bicycle.gif
+Blue Arrow      , Images/back_blue_arrow.gif
+Red Casino      , Images/back_red_casino.gif
+Blue Casino     , Images/back_blue_casino.gif
+Suit Checkers   , Images/back_checker_suits.gif
+#
+# TABLEIMGS
+#    Table images are 900x445 (W x H) pixels
+#
+Purple          , Images/table_purple.gif
+Green           , Images/table_green.gif
+Red             , Images/table_red.gif
+Blue            , Images/table_blue.gif
+Black           , Images/table_black.gif
+#
+# CLIENTOPTIONS
+hideHoleCards = false
+muckLosingHands = true
+#
+# APPLETOPTIONS
+server =
