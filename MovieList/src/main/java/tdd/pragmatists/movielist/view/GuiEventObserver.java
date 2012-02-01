@@ -1,4 +1,4 @@
-package tdd.mimuw.movielist.view;
+package tdd.pragmatists.movielist.view;
 
 public interface GuiEventObserver {
 

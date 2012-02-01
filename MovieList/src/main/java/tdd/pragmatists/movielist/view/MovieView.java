@@ -1,8 +1,8 @@
-package tdd.mimuw.movielist.view;
+package tdd.pragmatists.movielist.view;
 
 import java.util.List;
 
-import tdd.mimuw.movielist.movies.Movie;
+import tdd.pragmatists.movielist.movies.Movie;
 
 public interface MovieView {
 

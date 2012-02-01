@@ -1,4 +1,4 @@
-package tdd.mimuw.movielist.view;
+package tdd.pragmatists.movielist.view;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -12,7 +12,7 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import tdd.mimuw.movielist.movies.Movie;
+import tdd.pragmatists.movielist.movies.Movie;
 
 @SuppressWarnings("serial")
 public class SwingMovieList extends JPanel implements MovieView {

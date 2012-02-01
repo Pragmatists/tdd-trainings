@@ -1,4 +1,4 @@
-package tdd.mimuw.movielist.presenter;
+package tdd.pragmatists.movielist.presenter;
 
 import static org.mockito.Mockito.*;
 
@@ -7,8 +7,8 @@ import java.util.List;
 
 import org.junit.Test;
 
-import tdd.mimuw.movielist.movies.Movie;
-import tdd.mimuw.movielist.view.MovieView;
+import tdd.pragmatists.movielist.movies.Movie;
+import tdd.pragmatists.movielist.view.MovieView;
 
 public class MoviePresenterShould {
 

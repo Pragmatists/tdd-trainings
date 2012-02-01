@@ -1,4 +1,4 @@
-package tdd.mimuw.movielist.view;
+package tdd.pragmatists.movielist.view;
 
 import static org.mockito.Mockito.*;
 
@@ -10,7 +10,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import tdd.mimuw.movielist.MainApplicationFrame;
+import tdd.pragmatists.movielist.MainApplicationFrame;
 
 public class SwingMovieListShould extends FestSwingTestCaseTemplate {
 

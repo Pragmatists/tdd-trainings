@@ -1,12 +1,12 @@
-package tdd.mimuw.movielist;
+package tdd.pragmatists.movielist;
 
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
 
-import tdd.mimuw.movielist.movies.Movie;
-import tdd.mimuw.movielist.presenter.MovieListPresenter;
-import tdd.mimuw.movielist.view.SwingMovieList;
+import tdd.pragmatists.movielist.movies.Movie;
+import tdd.pragmatists.movielist.presenter.MovieListPresenter;
+import tdd.pragmatists.movielist.view.SwingMovieList;
 
 public class ApplicationRunner {
 	public static void main(String[] args) {

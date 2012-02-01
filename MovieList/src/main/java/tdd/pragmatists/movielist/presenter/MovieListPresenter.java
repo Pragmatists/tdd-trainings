@@ -1,10 +1,10 @@
-package tdd.mimuw.movielist.presenter;
+package tdd.pragmatists.movielist.presenter;
 
 import java.util.List;
 
-import tdd.mimuw.movielist.movies.Movie;
-import tdd.mimuw.movielist.view.GuiEventObserver;
-import tdd.mimuw.movielist.view.MovieView;
+import tdd.pragmatists.movielist.movies.Movie;
+import tdd.pragmatists.movielist.view.GuiEventObserver;
+import tdd.pragmatists.movielist.view.MovieView;
 
 public class MovieListPresenter implements GuiEventObserver {
 

@@ -1,8 +1,8 @@
-package tdd.mimuw.movielist;
+package tdd.pragmatists.movielist;
 
 import javax.swing.JFrame;
 
-import tdd.mimuw.movielist.view.SwingMovieList;
+import tdd.pragmatists.movielist.view.SwingMovieList;
 
 @SuppressWarnings("serial")
 public class MainApplicationFrame extends JFrame {

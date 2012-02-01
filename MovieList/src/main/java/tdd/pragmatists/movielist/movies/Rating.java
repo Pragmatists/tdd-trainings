@@ -1,4 +1,4 @@
-package tdd.mimuw.movielist.movies;
+package tdd.pragmatists.movielist.movies;
 
 import java.util.ArrayList;
 import java.util.List;
