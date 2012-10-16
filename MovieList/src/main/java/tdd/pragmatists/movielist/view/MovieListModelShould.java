@@ -14,14 +14,14 @@ import tdd.pragmatists.movielist.movies.Movie;
 
 public class MovieListModelShould {
 
-	@Test
-	public void invokeListenersOnUpdate() throws Exception {
-		MovieListModel movieListModel = new MovieListModel();
-		ListDataListener listener = mock(ListDataListener.class);
-		movieListModel.addListDataListener(listener);
+    @Test
+    public void invokeListenersOnUpdate() {
+        MovieListModel movieListModel = new MovieListModel();
+        ListDataListener listener = mock(ListDataListener.class);
+        movieListModel.addListDataListener(listener);
 
-		movieListModel.update(new ArrayList<Movie>());
+        movieListModel.update(new ArrayList<Movie>());
 
-		verify(listener).contentsChanged(any(ListDataEvent.class));
-	}
+        verify(listener).contentsChanged(any(ListDataEvent.class));
+    }
 }

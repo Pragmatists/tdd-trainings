@@ -7,7 +7,7 @@
 		<version>1.0</version>
 	</parent>
 	<groupId>tdd-training</groupId>
-	<artifactId>MovieListk</artifactId>
+	<artifactId>MovieList</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<dependencies>
 		<dependency>
