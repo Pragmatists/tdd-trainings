@@ -35,7 +35,11 @@ public class CalculatorJUnitParamsTest {
  
     // --
     public Object[] sumParameters() {
-        return $($(1,5, 6), $(-1,2, 1));
+        return $($(1,5, sumsTo(6)), $(-1,2, sumsTo(1)));
+    }
+
+    private int sumsTo(int value) {
+        return value;
     }
     
     
