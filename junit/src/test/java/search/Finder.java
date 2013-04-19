@@ -11,9 +11,16 @@ class Finder {
         this.posts = listOfPosts;
     }
 
-    public Post findFirst(String string) {
+    /*
+     * znajduje pierwszy z brzegu post, ktory zawiera tresc "content"
+     */
+    public Post findFirst(String content) {
         return posts.get(0);
     }
+    
+    /*
+     * znajduje wszystkie posty, ktory zawieraja tresc "content"
+     */
 
     public List<Post> findAll(String string) {
         List<Post> result = new ArrayList<Post>();

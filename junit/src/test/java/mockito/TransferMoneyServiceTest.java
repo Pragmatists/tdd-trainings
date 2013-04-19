@@ -2,7 +2,6 @@ package mockito;
 
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyZeroInteractions;
-import static org.mockito.Mockito.when;
 
 import org.junit.Before;
 import org.junit.Ignore;
@@ -27,23 +26,19 @@ public class TransferMoneyServiceTest {
 
     
     @Mock
-    private UserRepository userRepository;
-    
-    @Mock
     private AccountRepository accountRepository;
 
     private TransferMoneyService transferMoneyService;
     
     @Before
     public void setUp() {
-        transferMoneyService = new TransferMoneyService(userRepository, accountRepository);
+        transferMoneyService = new TransferMoneyService(accountRepository);
     }
     
     @Test
     public void shouldNotTransferAnyMoney() {
         //given
         User user = aUser(1);
-        when(userRepository.fetchBy(aUserReference(1))).thenReturn(user);
         
         //when
         transferMoneyService.transfer(user, user, 100);
@@ -58,34 +53,19 @@ public class TransferMoneyServiceTest {
         //given
         User payingUser = aUser(1);
         User receiver = aUser(2);
-        givenUsersInRepositoryAre(payingUser, receiver);
         
         //when
         transferMoneyService.transfer(payingUser, receiver, 20);
         
         //then
-        verify(accountRepository).decrease(receiver, 20);
-        verify(accountRepository).increase(payingUser, -20);
-        
+        verify(accountRepository).transferFrom(receiver, 20);
+        verify(accountRepository).transferTo(payingUser, 20);
     }
     
     // --
-
-    private void givenUsersInRepositoryAre(User ...users) {
-        for (User user : users) {
-            when(userRepository.fetchBy(aUserReference(user.getId()))).thenReturn(user);
-        }
-    }
-
 
     private User aUser(int i) {
         return new User(i);
     }
 
-
-
-    private UserReference aUserReference(int i) {
-        return new UserReference(i);
-    }
-    
 }

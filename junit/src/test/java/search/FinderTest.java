@@ -46,11 +46,12 @@ public class FinderTest {
 
     @Test
     @Ignore
-    public void shouldNotFindPostNotContainingGivenText() throws Exception {
+    public void shouldFindOnlyPostsContainingGivenText() throws Exception {
         // given
-        Post post = new Post("On gada!");
+        String text = "gada";
+        Post postContainingGivenText = new Post("On gada!");
         Post postNotContainingGivenText = new Post("No! Ale to tylko jedna z jego wad!");
-        givenPosts(post, postNotContainingGivenText);
+        givenPosts(postContainingGivenText, postNotContainingGivenText);
 
         // when
         //TODO:

@@ -2,11 +2,9 @@ package mockito;
 
 public class TransferMoneyService {
 
-    private UserRepository userRepository;
     private AccountRepository accountRepository;
 
-    public TransferMoneyService(UserRepository userRepository, AccountRepository accountRepository) {
-        this.userRepository = userRepository;
+    public TransferMoneyService(AccountRepository accountRepository) {
         this.accountRepository = accountRepository;
     }
 

@@ -2,8 +2,8 @@ package mockito;
 
 public interface AccountRepository {
 
-    void decrease(User receiver, int amount);
+    void transferTo(User receiver, int amount);
 
-    void increase(User payingUser, int amount);
+    void transferFrom(User payingUser, int amount);
 
 }
