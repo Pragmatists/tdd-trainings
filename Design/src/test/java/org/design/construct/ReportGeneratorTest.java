@@ -5,7 +5,16 @@ import java.io.IOException;
 import org.design.statical.User;
 import org.fest.assertions.api.Assertions;
 import org.junit.Test;
-
+/**
+ * TODO:
+ * uruchom test - zaobserwuj że rzuca wyjątkiem, pomimo braku asercji
+ * obejrzyj implementację konstruktora new ReportGenerator()
+ * i zaobserwuj problematyczne instrukcje
+ * zrefaktoryzuj tak, aby test nie rzucał wyjątku
+ * zrefaktoryzuj tak, aby udało się napisać asercję
+ * zaimplementuj aby test przechodził
+ *
+ */
 public class ReportGeneratorTest {
 
 	@Test
