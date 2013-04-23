@@ -16,7 +16,6 @@ import org.mockito.runners.MockitoJUnitRunner;
  * -- co moga oznaczac anotacje @Mock ? 
  * Przyjrzyj sie pierwszemu testowi (ale nie zagladaj jeszcze w bebechy...)
  * -- co moga powodowac metody "when" "thenReturn" oraz "verifyZeroInteractions"?
- * -- dlaczego userRepository nie jest nullem? Czym jest? [wlacz debug, zeby sprawdzic]
  *
  * Zaimplementuj TransferMoneyService tak, aby oba testy przechodzily.
  */
@@ -58,14 +57,14 @@ public class TransferMoneyServiceTest {
         transferMoneyService.transfer(payingUser, receiver, 20);
         
         //then
-        verify(accountRepository).transferFrom(receiver, 20);
-        verify(accountRepository).transferTo(payingUser, 20);
+        verify(accountRepository).transferFrom(payingUser, 20);
+        verify(accountRepository).transferTo(receiver, 20);
     }
     
     // --
 
-    private User aUser(int i) {
-        return new User(i);
+    private User aUser(int id) {
+        return new User(id);
     }
 
 }
