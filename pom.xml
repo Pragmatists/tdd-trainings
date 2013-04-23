@@ -24,6 +24,24 @@
 		</pluginManagement>
 	</build>
 
+	<modules>
+		<module>Assertions</module>
+		<module>Atm</module>
+		<module>CodeAnalyzer</module>
+		<module>Database</module>
+		<module>Displayer</module>
+		<module>Employee</module>
+		<module>FizzBuzz</module>
+		<module>junit</module>
+		<module>MovieList</module>
+		<module>pokerapp</module>
+		<module>PrimeFactors</module>
+		<module>SnowMocks</module>
+		<module>Solid</module>
+		<module>Stack</module>
+		<module>Warehouse</module>
+	</modules>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
