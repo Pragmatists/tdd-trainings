@@ -15,19 +15,19 @@ import org.springframework.transaction.annotation.Transactional;
 @ContextConfiguration(locations = { "file:src/main/resources/real-services.xml" })
 @Transactional
 @TransactionConfiguration(defaultRollback = true)
-public class HelloEntityTest {
+public class MovieRepositoryTest {
 
 	@Autowired
-	private HelloEntityRepository helloEntityRepo;
+	private MovieRepository movieRepository;
 
 	@Test
 	public void shouldHaveNamePersisted() {
-		HelloEntity helloEntity = new HelloEntity("name");
+		Movie movie = new Movie("name");
 
-		HelloEntity saved = helloEntityRepo.saveAndFlush(helloEntity);
+		Movie saved = movieRepository.saveAndFlush(movie);
 
-		HelloEntity loadedEntity = helloEntityRepo.findByName( "name").get(0);
-		assertThat(loadedEntity.id).isEqualTo(saved.id);
+		Movie loadedMovie = movieRepository.findByName( "name").get(0);
+		assertThat(loadedMovie.id).isEqualTo(saved.id);
 	}
 
 

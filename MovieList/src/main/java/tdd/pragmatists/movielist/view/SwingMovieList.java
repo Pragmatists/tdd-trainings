@@ -12,7 +12,7 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import tdd.pragmatists.movielist.movies.Movie;
+import tdd.pragmatists.movielist.db.Movie;
 import tdd.pragmatists.movielist.presenter.MovieListPresenter;
 
 @SuppressWarnings("serial")
