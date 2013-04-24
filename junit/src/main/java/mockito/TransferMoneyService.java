@@ -8,7 +8,7 @@ public class TransferMoneyService {
         this.accountRepository = accountRepository;
     }
 
-    public void transfer(User payingUser, User receiver, int i) {
+    public void transfer(User payingUser, User receiver, int amount) {
         
     }
 

@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.swing.AbstractListModel;
 
-import tdd.pragmatists.movielist.movies.Movie;
+import tdd.pragmatists.movielist.db.Movie;
 
 @SuppressWarnings("serial")
 public class MovieListModel extends AbstractListModel {

@@ -15,7 +15,7 @@ public class EmployeePaidByAchievementsTest {
 		Employee ceo = new Employee();
 		ceo.setType(Type.CEO);
 		ceo.setBase(100);
-		ceo.setCompanyResult(100);
+		ceo.setCompanyResult(50000000);
 		ceo.setAchievements(1);
 		ceo.setAchievementsFactor(2);
 
@@ -23,7 +23,7 @@ public class EmployeePaidByAchievementsTest {
 		double salary = ceo.getSalary();
 
 		// then
-		assertEquals(100 + 100 * 0.01 + 1 * 2, salary, 1);
+		assertEquals(100 + 1 * 2 + 50000000 * 0.01, salary, 0.1);
 	}
 
 	@Test
@@ -32,7 +32,7 @@ public class EmployeePaidByAchievementsTest {
 		Employee sales = new Employee();
 		sales.setType(Type.SALES);
 		sales.setBase(100);
-		sales.setCompanyResult(100);
+		sales.setCompanyResult(50000000);
 		sales.setAchievements(1);
 		sales.setAchievementsFactor(2);
 
@@ -40,7 +40,7 @@ public class EmployeePaidByAchievementsTest {
 		double salary = sales.getSalary();
 
 		// then
-		assertEquals(100 + 100 * 0.0000001 + 1 * 2, salary, 1);
+		assertEquals(100 + 50000000 * 0.0000001 + 1 * 2, salary, 0.1);
 	}
 
 	@Test

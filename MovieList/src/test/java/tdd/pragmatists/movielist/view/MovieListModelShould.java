@@ -1,7 +1,8 @@
 package tdd.pragmatists.movielist.view;
 
-import static org.mockito.Matchers.*;
-import static org.mockito.Mockito.*;
+import static org.mockito.Matchers.any;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 import java.util.ArrayList;
 
@@ -10,7 +11,7 @@ import javax.swing.event.ListDataListener;
 
 import org.junit.Test;
 
-import tdd.pragmatists.movielist.movies.Movie;
+import tdd.pragmatists.movielist.db.Movie;
 
 public class MovieListModelShould {
 

@@ -2,7 +2,7 @@ package tdd.pragmatists.movielist.view;
 
 import java.util.List;
 
-import tdd.pragmatists.movielist.movies.Movie;
+import tdd.pragmatists.movielist.db.Movie;
 
 public interface MovieView {
 
