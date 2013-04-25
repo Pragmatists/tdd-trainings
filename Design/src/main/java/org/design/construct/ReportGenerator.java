@@ -6,7 +6,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.design.statical.User;
-import org.fest.util.Files;
 
 public class ReportGenerator {
 

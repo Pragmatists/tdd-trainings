@@ -3,7 +3,6 @@ package org.design.construct;
 import java.io.IOException;
 
 import org.design.statical.User;
-import org.fest.assertions.api.Assertions;
 import org.junit.Test;
 /**
  * TODO:

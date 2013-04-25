@@ -8,3 +8,8 @@ syntax: regexp
 \.classpath$
 syntax: regexp
 bin$
+syntax: regexp
+\.idea$
+syntax: regexp
+.*\.iml$
+
