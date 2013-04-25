@@ -22,7 +22,7 @@ public class EmailerTest {
 		
 		//TODO: verify email was sent to email@gmail.com with subject "hello, User"
 		//sth like
-//		Assertions.assertThat(getMessageTo("email@gmail.com",wiser)).isEqualTo("hello, User");
+//		Assertions.assertThat(getMessageTo("email@gmail.com",)).isEqualTo("hello, User");
 	}
 	
 	@Test
@@ -30,7 +30,7 @@ public class EmailerTest {
 		
 		new Emailer().sendByeByeEmailTo(aUser("email@gmail.com","User"));
 		
-		//TODO: verify email was sent to email@gmail.com with subject "goodbye, User"
+		//TODO: verify email was sent to email@gmail.com with subject "bye, User"
 		//TODO: verify email was sent to admin@gmail.com with subject "user User left the system"
 	}
 
