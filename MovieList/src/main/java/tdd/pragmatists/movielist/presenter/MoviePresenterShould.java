@@ -1,13 +1,16 @@
 package tdd.pragmatists.movielist.presenter;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
 
-import tdd.pragmatists.movielist.movies.Movie;
+import tdd.pragmatists.movielist.db.Movie;
+import tdd.pragmatists.movielist.db.MovieRepository;
 import tdd.pragmatists.movielist.view.MovieView;
 
 public class MoviePresenterShould {
@@ -30,7 +33,7 @@ public class MoviePresenterShould {
     }
 
     private MovieListPresenter presenterWithNoMovies() {
-        return new MovieListPresenter(movieView, emptyList(Movie.class));
+        return new MovieListPresenter(movieView, mock(MovieRepository.class));
     }
 
     private <T> List<T> emptyList(Class<T> clazz) {
