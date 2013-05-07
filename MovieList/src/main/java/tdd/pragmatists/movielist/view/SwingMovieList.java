@@ -43,7 +43,7 @@ public class SwingMovieList extends JPanel implements MovieView {
     private JList movies;
     private JButton add;
     private JButton delete;
-    private MovieListModel moviesModel = new MovieListModel();
+    private final MovieListModel moviesModel = new MovieListModel();
     private JTextField newMovieTitle;
     private MovieListPresenter movieListPresenter;
 
@@ -93,5 +93,11 @@ public class SwingMovieList extends JPanel implements MovieView {
     public Movie getSelectedMovie() {
         return (Movie) movies.getSelectedValue();
     }
+
+	public void shown() {
+		movieListPresenter.shown();
+	}
+    
+    
 
 }

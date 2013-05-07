@@ -10,8 +10,8 @@ import tdd.pragmatists.movielist.view.MovieView;
 public class MovieListPresenter {
 
     private final MovieView movieView;
-    private MovieRepository movies;
-    private List<Movie> moviesList = new ArrayList<Movie>();
+    private final MovieRepository movies;
+    private final List<Movie> moviesList = new ArrayList<Movie>();
 
     public MovieListPresenter(MovieView movieView, MovieRepository movies) {
         this.movieView = movieView;
@@ -24,5 +24,9 @@ public class MovieListPresenter {
 		moviesList.add(movie);
         movieView.showMovies(moviesList);
     }
+
+	public void shown() {
+		movieView.showMovies(movies.findAll());
+	}
 
 }

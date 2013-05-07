@@ -1,5 +1,8 @@
 package tdd.pragmatists.movielist;
 
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+
 import javax.swing.JFrame;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -12,12 +15,19 @@ public class ApplicationRunner {
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("real-services.xml");
 		
-		SwingMovieList swingMovieList = new SwingMovieList();
+		final SwingMovieList swingMovieList = new SwingMovieList();
 		MovieListPresenter movieListPresenter = new MovieListPresenter(
 				swingMovieList, context.getBean(MovieRepository.class));
 		swingMovieList.observeWith(movieListPresenter);
 
 		JFrame frame = new MainApplicationFrame(swingMovieList);
+		frame.addComponentListener ( new ComponentAdapter () {
+        	
+            @Override
+			public void componentShown ( ComponentEvent e ) {
+                swingMovieList.shown();
+            }
+        });
 		frame.setVisible(true);
 	}
 }
