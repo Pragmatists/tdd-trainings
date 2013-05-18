@@ -56,6 +56,10 @@
 		<module>design</module>
 		<module>abstract-factory-refactoring</module>
 		<module>abstract-factory-repository</module>
+		<module>ElevatorKata</module>
+		<module>JUnitBasicsKata</module>
+		<module>VendingMachineKata</module>
+		<module>VendingMachineApplication</module>
 	</modules>
 
 	<dependencies>
