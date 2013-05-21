@@ -53,7 +53,7 @@
 		<module>Solid</module>
 		<module>Stack</module>
 		<module>Warehouse</module>
-		<module>design</module>
+		<module>Design</module>
 		<module>abstract-factory-refactoring</module>
 		<module>abstract-factory-repository</module>
 		<module>ElevatorKata</module>
