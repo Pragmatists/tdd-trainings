@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<title>Vending Machine</title>
+		<link rel="stylesheet" type="text/css" href="/css/vending-machine.css">
+	</head>
+	<body>
+		<div id="vending-machine">
+			
+			<div id="display">
+				<div>Display:</div> 
+				<div id="equalizer"></div>
+			</div>
+			<div id="storage"></div>
+			<div id="buttons">
+				<div>Push button:</div>
+				<a href="#" onclick="pushButton(1);">1</a>
+				<a href="#" onclick="pushButton(2);">2</a>
+				<a href="#" onclick="pushButton(3);">3</a>
+				<a href="#" onclick="pushButton(4);">4</a>
+				<a href="#" onclick="pushButton(5);">5</a>
+				<a href="#" onclick="pushButton(6);">6</a>
+				<a href="#" onclick="pushButton(7);">7</a>
+				<a href="#" onclick="pushButton(8);">8</a>
+				<a href="#" onclick="pushButton(9);">9</a>
+			</div>
+			<div id="coins">
+				<div>Insert coin:</div>
+				<a href="#" onclick="insertCoin('FIVE_DOLLAR');">5,00 <small>PLN</small></a>
+				<a href="#" onclick="insertCoin('TWO_DOLLAR');">2,00 <small>PLN</small></a>
+				<a href="#" onclick="insertCoin('ONE_DOLLAR');">1,00 <small>PLN</small></a>
+				<a href="#" onclick="insertCoin('FIFTY_CENTS');">0,50 <small>PLN</small></a>
+				<a href="#" onclick="insertCoin('TWENTY_CENTS');">0,20 <small>PLN</small></a>
+				<a href="#" onclick="insertCoin('TEN_CENTS');">0,10 <small>PLN</small></a>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+		<script>
+			
+			$(document).ready(function(){
+	
+				loadState();
+
+			});
+
+			var loadState = function(){
+				var storageDiv = $("#storage");
+				storageDiv.empty();
+				
+				$.getJSON("/vending-machine/state", function(data){
+					
+					$("#equalizer").html(data.display);
+					
+					$.each(data.storage.shelfs, function(key, shelf){
+						var shelfDiv = $("<div id='" + key + "'/>");
+
+						shelfDiv.append("<div class='slot'>" + key + ":</div>");
+						shelfDiv.append("<div class='product'>" + shelf.product.name + "(" + shelf.items + ")</div>")
+						shelfDiv.appendTo(storageDiv);
+					});
+				});
+			}
+
+			var post = function(url, data){
+				$.ajax({
+					"url": url,
+					"type": "POST",
+					"dataType": "json",
+					"contentType": "application/json",
+					"data": JSON.stringify(data), 
+					"success": function(){
+						loadState();
+					}
+				});
+			}
+			
+			var insertCoin = function(coin){
+				
+				console.log("insert: " + coin);
+				post("/vending-machine/insert", coin);				
+
+			};
+
+			var pushButton = function(button){
+
+				console.log("push: " + button);
+				post("/vending-machine/push", button);
+			};
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+#buttons,#coins,#display,#storage,#vending-machine {
+	padding: 10px;
+	width: 200px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #333333;
+	margin: 10px;
+}
+
+#buttons,#coins,#display,#storage {
+	float: right;
+	background-color: #FFFFFF;
+}
+
+#storage {
+	width: 400px;
+	float: left;
+	height: 100%;
+	max-height: 600px;
+	background-color: #FFFFFF;
+}
+
+#vending-machine {
+	width: 700px;
+	overflow: hidden;
+	background-color: #EEEEEE;
+}
+
+#buttons a,#coins a,#equalizer {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #333333;
+	background-color: #CCCCCC;
+	font-size: 24px;
+	text-align: center;
+	margin: 3px;
+	text-decoration: none;
+	color: #333333;
+}
+
+#storage>div {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #333333;
+	margin: 5px;
+	background-color: #CCCCCC;
+}
+
+.slot {
+	float: left;
+	width: 50px;
+	font-size: 24px;
+	text-align: right;
+	padding: 5px;
+	padding-right: 10px;
+}
+
+.product {
+	font-size: 24px;
+	padding: 5px;
+}
+
+#buttons a,#coins a {
+	display: inline-block;
+	width: 50px;
+}
+
+#equalizer {
+	height: 90px;
+}
+
+#coins a {
+	font-size: 20px;
+}
