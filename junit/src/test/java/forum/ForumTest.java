@@ -39,9 +39,9 @@ public class ForumTest {
     @Test
     public void postsShouldBeListedDescendingByCreationDate() {
         //given
-        Post post1 = aPost();
-        Post post2 = aPost();
-        Post post3 = aPost();
+        Post post1 = aPost("1");
+        Post post2 = aPost("2");
+        Post post3 = aPost("3");
         Forum forum = aForumWith(post1, post2, post3);
         
         //when
@@ -49,31 +49,14 @@ public class ForumTest {
         
         //then
         assertThat(allPosts).containsExactly(post3, post2, post1);
-    }
-    
-    @Test
-    public void postsShouldBeListedDescendingByCreationDate2() {
-      //given
-        Post post1 = aPost();
-        Post post2 = aPost();
-        Post post3 = aPost();
-        Forum forum = aForumWith(post1, post2, post3);
-        
-        //when
-        List<Post> allPosts = forum.allPosts();
-        List<Post> allPosts2 = forum.allPosts();
-        
-        //then
-        assertThat(allPosts).containsExactly(post3, post2, post1);
-        assertThat(allPosts2).containsExactly(post3, post2, post1);
     }
     
     @Test
     public void userShouldBeAbleToEditAPost() {
         //given
-        Post post1 = aPost();
+        Post post1 = aPost("A");
         Forum forum = aForumWith(post1);
-        Post newPost = aPost();
+        Post newPost = aPost("B");
         
         //when
         forum.editPost(post1, newPost);
@@ -87,9 +70,9 @@ public class ForumTest {
     @Test(expected=IllegalArgumentException.class)
     public void userShouldNotBeAbleToEditAPostNotBelongingToTheForum() {
         //given
-        Post post1 = aPost();
-        Post aPostNotBelongingToTheForum = aPost();
-        Post newPost = aPost();
+        Post post1 = aPost("A");
+        Post aPostNotBelongingToTheForum = aPost("B");
+        Post newPost = aPost("C");
         Forum forum = aForumWith(post1);
         
         //when
@@ -114,8 +97,12 @@ public class ForumTest {
     
     
     private Post aPost() {
-        return new Post("someContent");
+        return aPost("someContent");
     }
+
+	private Post aPost(String content) {
+		return new Post(content);
+	}
 
     private Forum aForum() {
         return new Forum();

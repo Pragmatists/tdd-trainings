@@ -3,7 +3,7 @@ package forum;
 
 class Post {
 
-    private String content;
+    private final String content;
 
     public Post(String content) {
         this.content = content;
@@ -37,5 +37,12 @@ class Post {
             return false;
         return true;
     }
+
+	@Override
+	public String toString() {
+		return "Post [content=" + content + "]";
+	}
+    
+    
 
 }
