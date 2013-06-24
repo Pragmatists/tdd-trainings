@@ -65,8 +65,6 @@ public class ForumTest {
         assertThat(forum.allPosts()).containsExactly(newPost);
     }
     
-    
-    
     @Test(expected=IllegalArgumentException.class)
     public void userShouldNotBeAbleToEditAPostNotBelongingToTheForum() {
         //given
@@ -83,6 +81,11 @@ public class ForumTest {
         //spodziewamy sie IllegalArgumentException (zobacz atrybut "expected" w anotacji @Test) 
         
     }
+    
+    //TODO: przepisz powyższy test na dwa sposoby:
+    //		: - przy użyciu @Rule ExpectedException expectedException
+    //		: - przy użyciu catch-exception
+    // w obu tych sposobach sprawdź nie tylko typ wyjątku ale również wiadomość
     
     // --
 
