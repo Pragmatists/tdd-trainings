@@ -86,6 +86,7 @@ public class ForumTest {
     //		: - przy użyciu @Rule ExpectedException expectedException
     //		: - przy użyciu catch-exception
     // w obu tych sposobach sprawdź nie tylko typ wyjątku ale również wiadomość
+    // przykłady uzycia ww. sposobów znajdziesz w exceptions.ExamplesForExceptionsTest
     
     // --
 
