@@ -11,13 +11,15 @@ import com.googlecode.catchexception.CatchException;
 public class ExamplesForExceptionsTest {
 
 	IntegerParser parser = new IntegerParser();
-	
+
+	// -----------------------------------------------
+	// simple try-catch - not recommended
 	@Test
 	public void shouldFailMeaningfullyIfParsedStringIsNotANumber_simple()
 			throws Exception {
 
 		try {
-			parser.parse("NaN");
+			throwException();
 			Assert.fail("expectedException!");
 
 		} catch (Exception e) {
@@ -25,30 +27,43 @@ public class ExamplesForExceptionsTest {
 		}
 	}
 
+	// -----------------------------------------------
+	// junit expected exception - allows to check only class
 	@Test(expected = NumberFormatException.class)
 	public void shouldFailMeaningfullyIfParsedStringIsNotANumber_expectedOnTest()
 			throws Exception {
-		Integer.parseInt("NaN");
-	}
-	
-	@Rule
-	public ExpectedException expectedException = ExpectedException.none();
-	
-	@Test
-	public void shouldFailMeaningfullyIfParsedStringIsNotANumber_expectedRule()
-			throws Exception {
-		expectedException.expect(NumberFormatException.class);
-		expectedException.expectMessage("For input string: \"NaN\"");
-		parser.parse("NaN");
+		throwException();
 	}
 
+	// -----------------------------------------------
+	// junit rule for expected exception - recommended way
+	@Rule
+	public ExpectedException expectedException = ExpectedException.none();
+
 	@Test
-	public void shouldFailMeaningfullyIfParsedStringIsNotANumber_catchException()
-			throws Exception {
-		CatchException.catchException(parser).parse("NaN");
-		Assertions.assertThat(CatchException.caughtException()).isInstanceOf(NumberFormatException.class);
-		Assertions.assertThat(CatchException.caughtException()).hasMessage("For input string: \"NaN\"");
+	public void shouldFailMeaningfullyIfParsedStringIsNotANumber_expectedRule() {
+		// notice that we call methods on expectedException BEFORE
+		// executing code that will throw exception
+		expectedException.expect(NumberFormatException.class);
+		expectedException.expectMessage("For input string: \"NaN\"");
+		throwException();
 	}
-	
+
+	// -----------------------------------------------
+	// CatchException library - very good for advanced assertions
+	// cannot be used for static calls and for constructors
+
+	@Test
+	public void shouldFailMeaningfullyIfParsedStringIsNotANumber_catchException() {
+		CatchException.catchException(parser).parse("NaN");
+		Assertions.assertThat(CatchException.caughtException()).isInstanceOf(
+				NumberFormatException.class);
+		Assertions.assertThat(CatchException.caughtException()).hasMessage(
+				"For input string: \"NaN\"");
+	}
+
+	private void throwException() {
+		parser.parse("NaN");
+	}
 
 }
