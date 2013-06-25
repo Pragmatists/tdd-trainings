@@ -1,6 +1,6 @@
 1. Wykonaj zadania opisane w klasie ForumTest
 2. Wykonaj zadania opisane w klasie FinderTest
-3. Wykonaj zadania opisane w klasie BeforeAndAfters
+3. Wykonaj zadania opisane w klasie BeforeAndAfterTest
 4. Wykonaj zadania opisane w klasie FileWriterIntegrationTest
 5. Wykonaj zadania opisane w klasie FizzBuzzServletIntegrationTest
 6. Wykonaj zadania opisane w klasie Calculator
