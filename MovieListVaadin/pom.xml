@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>pragmatists.tdd-training</groupId>
-	<artifactId>MovieList</artifactId>
+	<artifactId>MovieListVaadin</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 
