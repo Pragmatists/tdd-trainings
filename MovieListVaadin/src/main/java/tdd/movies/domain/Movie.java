@@ -1,49 +1,68 @@
 package tdd.movies.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+import org.apache.commons.lang.builder.EqualsBuilder;
+import org.apache.commons.lang.builder.HashCodeBuilder;
+
+@Entity
 public class Movie {
 
-    private String title;
-    private String director;
-    private int year;
+	@Id
+	@Column(name="TITLEXYZ")
+	private String title;
+	private String director;
+	private int year;
 
-    private Movie() {
-    }
-    
-    public Movie(String title, String director, int year) {
-        this();
-        this.title = title;
-        this.director = director;
-        this.year = year;
-    }
+	private Movie() {
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	public Movie(String title, String director, int year) {
+		this();
+		this.title = title;
+		this.director = director;
+		this.year = year;
+	}
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public String getDirector() {
-        return director;
-    }
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
-    public void setDirector(String director) {
-        this.director = director;
-    }
+	public String getDirector() {
+		return director;
+	}
 
-    public int getYear() {
-        return year;
-    }
+	public void setDirector(String director) {
+		this.director = director;
+	}
 
-    public void setYear(int year) {
-        this.year = year;
-    }
+	public int getYear() {
+		return year;
+	}
 
-    @Override
-    public String toString() {
-        return String.format("'%s' (%s) by %s", title, year, director);
-    }
-    
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("'%s' (%s) by %s", title, year, director);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		return EqualsBuilder.reflectionEquals(this, obj);
+	}
+
+	@Override
+	public int hashCode() {
+		return HashCodeBuilder.reflectionHashCode(this);
+	}
+
 }

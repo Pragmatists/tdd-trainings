@@ -1,8 +1,8 @@
-drop table if exists CUSTOMER; 
+drop table if exists MOVIE; 
 create table MOVIE(
-	TITLE varchar(255), 
+	TITLEXYZ varchar(255), 
 	DIRECTOR varchar(255),
 	YEAR number(4),
-	PRIMARY KEY (TITLE)
+	PRIMARY KEY (TITLEXYZ)
 	);
 	
