@@ -4,8 +4,6 @@ import java.util.List;
 
 public interface MovieRepository {
 
-	public List<Movie> loadAll();
-
-	public void persistMovie(Movie movie);
+    public List<Movie> loadAll();
 
 }

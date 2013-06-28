@@ -11,6 +11,6 @@
 
 	<bean id="movieRepository" class="tdd.movies.infrastructure.TransientMovieRepository"/>
 
-<!-- 	<import resource="jdbc-context.xml"/> -->
+	<import resource="jdbc-context.xml"/>
 
 </beans>
