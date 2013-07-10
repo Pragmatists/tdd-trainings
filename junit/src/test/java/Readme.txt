@@ -6,3 +6,4 @@
 6. Wykonaj zadania opisane w klasie Calculator
 7. Wykonaj zadania opisane w klasie FizzBuzzTest 
 8. Wykonaj zadanie opisane w klasie ExampleSuite
+9. Wykonaj zadania opisane w klasie FellowshipOfTheRingTest
