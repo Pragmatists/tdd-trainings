@@ -9,7 +9,7 @@ public class Ping {
 
     /**
      * Stwierdza czy usluga pod podanym adresem url jest dostepna. Usluga jest uwazana za 
-     * dostepna jezeli w tresci odpowiedzi HTTP zawarty jest statu <code>OK</code>. 
+     * dostepna jezeli w tresci odpowiedzi HTTP zawarty jest status <code>OK</code>.
      * 
      * @param url adres uslugi do sprawdzenia
      * @return  <code>true</code> w przypadku gdy usluga zwraca status <code>OK</code>,
