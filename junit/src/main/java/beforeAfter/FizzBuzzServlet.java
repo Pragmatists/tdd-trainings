@@ -18,7 +18,7 @@ public class FizzBuzzServlet extends HttpServlet{
 
         String number = req.getParameter("number");
         
-        String answer = fizzBuzz.anserFor(Integer.valueOf(number));
+        String answer = fizzBuzz.answerFor(Integer.valueOf(number));
         
         resp.getWriter().write(answer);
     }

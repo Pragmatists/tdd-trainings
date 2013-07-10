@@ -2,7 +2,7 @@ package beforeAfter;
 
 public class FizzBuzz {
 
-    public String anserFor(int number) {
+    public String answerFor(int number) {
         
         String answer = "";
         
