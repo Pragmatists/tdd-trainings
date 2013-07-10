@@ -1,9 +1,8 @@
 package pl.pragmatists.tdd.assertions;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
 
-public class JUnit {
+public class Hamcrest {
 	@Test
 	public void notEmptyWordIsRevertable() {
 
@@ -23,5 +22,4 @@ public class JUnit {
 	public void revertedNullIsNull() {
 
 	}
-
 }

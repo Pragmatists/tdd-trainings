@@ -1,10 +1,9 @@
 package pl.pragmatists.refactoring.employee;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
-
 import pl.pragmatists.refactoring.employee.Employee.Type;
+
+import static org.junit.Assert.assertEquals;
 
 
 

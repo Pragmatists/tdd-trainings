@@ -1,11 +1,8 @@
 package pl.pragmatists.tdd.assertions;
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
-import static org.junit.matchers.JUnitMatchers.*;
 
 import org.junit.Test;
 
-public class Hamcrest {
+public class Fest {
 	@Test
 	public void notEmptyWordIsRevertable() {
 

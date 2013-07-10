@@ -1,6 +1,6 @@
 package pl.pragmatists.atm;
 
-import static org.fest.assertions.Assertions.*;
+import static org.fest.assertions.api.Assertions.assertThat;
 
 public class AtmDsl {
 

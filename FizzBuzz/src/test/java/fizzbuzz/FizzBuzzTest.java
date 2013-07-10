@@ -1,6 +1,6 @@
 package fizzbuzz;
 
-import org.junit.*;
+import org.junit.Test;
 
 public class FizzBuzzTest {
 

@@ -1,10 +1,8 @@
 package pl.pragmatists.tdd.assertions;
 
-import static org.fest.assertions.Assertions.*;
-
 import org.junit.Test;
 
-public class Fest {
+public class JUnit {
 	@Test
 	public void notEmptyWordIsRevertable() {
 
@@ -24,4 +22,5 @@ public class Fest {
 	public void revertedNullIsNull() {
 
 	}
+
 }
