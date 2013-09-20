@@ -209,7 +209,7 @@ public class Game {
     }
 
     private boolean didPlayerWin() {
-        return !(purses[currentPlayer] == 3);
+        return !(purses[currentPlayer] == 2);
     }
 
     public void nextTurn() {
