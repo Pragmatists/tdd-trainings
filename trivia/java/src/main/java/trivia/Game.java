@@ -34,8 +34,17 @@ public class Game {
         return (howManyPlayers() >= 2);
     }
 
-    public boolean add(String playerName) {
+    public void startWithPlayers(String... players) {
+        for (String player : players) {
+            add(player);
+        }
+    }
 
+    private void askForDice() {
+        System.out.println("Throw a dice. What is the number?");
+    }
+
+    public boolean add(String playerName) {
         players.add(playerName);
         places[howManyPlayers()] = 0;
         purses[howManyPlayers()] = 0;
@@ -44,13 +53,14 @@ public class Game {
         System.out.println(playerName + " was added");
         System.out.println("They are player number " + players.size());
         return true;
+
     }
 
     public int howManyPlayers() {
         return players.size();
     }
 
-    public void roll(int roll) {
+    public boolean roll(int roll) {
         System.out.println(players.get(currentPlayer) + " is the current player");
         System.out.println("They have rolled a " + roll);
 
@@ -65,13 +75,18 @@ public class Game {
                 }
 
                 System.out.println(players.get(currentPlayer)
-                        + "'s new location is "
-                        + places[currentPlayer]);
+                                           + "'s new location is "
+                                           + places[currentPlayer]);
                 System.out.println("The category is " + currentCategory());
                 askQuestion();
             } else {
                 System.out.println(players.get(currentPlayer) + " is not getting out of the penalty box");
                 isGettingOutOfPenaltyBox = false;
+                currentPlayer++;
+                if (currentPlayer == players.size()) {
+                    currentPlayer = 0;
+                }
+                return false;
             }
 
         } else {
@@ -82,12 +97,12 @@ public class Game {
             }
 
             System.out.println(players.get(currentPlayer)
-                    + "'s new location is "
-                    + places[currentPlayer]);
+                                       + "'s new location is "
+                                       + places[currentPlayer]);
             System.out.println("The category is " + currentCategory());
             askQuestion();
         }
-
+        return true;
     }
 
     private void askQuestion() {
@@ -103,6 +118,7 @@ public class Game {
         if (currentCategory() == "Rock") {
             System.out.println(rockQuestions.removeFirst());
         }
+        System.out.println("Was the answer correct? (Y/N)");
     }
 
     private String currentCategory() {
@@ -142,9 +158,9 @@ public class Game {
                 System.out.println("Answer was correct!!!!");
                 purses[currentPlayer]++;
                 System.out.println(players.get(currentPlayer)
-                        + " now has "
-                        + purses[currentPlayer]
-                        + " Gold Coins.");
+                                           + " now has "
+                                           + purses[currentPlayer]
+                                           + " Gold Coins.");
 
                 boolean winner = didPlayerWin();
                 currentPlayer++;
@@ -166,9 +182,9 @@ public class Game {
             System.out.println("Answer was corrent!!!!");
             purses[currentPlayer]++;
             System.out.println(players.get(currentPlayer)
-                    + " now has "
-                    + purses[currentPlayer]
-                    + " Gold Coins.");
+                                       + " now has "
+                                       + purses[currentPlayer]
+                                       + " Gold Coins.");
 
             boolean winner = didPlayerWin();
             currentPlayer++;
@@ -193,6 +209,10 @@ public class Game {
     }
 
     private boolean didPlayerWin() {
-        return !(purses[currentPlayer] == 6);
+        return !(purses[currentPlayer] == 3);
+    }
+
+    public void nextTurn() {
+        askForDice();
     }
 }
