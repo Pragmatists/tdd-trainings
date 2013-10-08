@@ -12,4 +12,9 @@ syntax: regexp
 \.idea$
 syntax: regexp
 .*\.iml$
-
+syntax: regexp
+\.gradle$
+syntax: regexp
+build$
+syntax: regexp
+out$

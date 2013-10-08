@@ -1,0 +1,42 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: "pitest"
+
+group = 'trivia'
+version = '0.0.1-SNAPSHOT'
+
+description = """"""
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+repositories {
+     mavenCentral()
+}
+dependencies {
+    testCompile group: 'junit', name: 'junit', version:'4.11'
+    testCompile group: 'org.apache.commons', name: 'commons-lang3', version:'3.1'
+    testCompile group: 'com.google.guava', name: 'guava', version:'11.0.2'
+    testCompile group: 'org.assertj', name: 'assertj-core', version:'1.4.0'
+    testCompile group: 'org.mockito', name: 'mockito-core', version:'1.9.5'
+    testCompile group: 'org.pitest', name: 'pitest', version:'0.30'
+}
+
+pitest {
+    targetClasses = ['trivia.*']
+    outputFormats = ['HTML']
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        //Needed only for SNAPSHOT versions
+        //maven { url "http://oss.sonatype.org/content/repositories/snapshots/" }
+    }
+    dependencies {
+        classpath 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:0.30.0'
+        classpath "org.pitest:pitest:0.30"
+    }
+}
+
