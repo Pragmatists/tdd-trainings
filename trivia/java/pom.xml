@@ -57,7 +57,7 @@
             <plugin>
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
-                <version>0.30</version>
+                <version>0.31</version>
                 <configuration>
                     <targetClasses>
                         <param>trivia.*</param>
@@ -66,6 +66,14 @@
                         <param>trivia.*</param>
                     </targetTests>
                 </configuration>
+                <executions>
+                    <execution>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>mutationCoverage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
