@@ -1,10 +1,9 @@
 package pragmatists;
 
+import org.junit.Test;
+
 import static org.easymock.EasyMock.*;
 import static org.junit.Assert.*;
-
-import org.junit.Ignore;
-import org.junit.Test;
 
 public class OrderTestEasyMock {
 
@@ -25,7 +24,6 @@ public class OrderTestEasyMock {
 	}
 
 	@Test
-	@Ignore
 	public void orderShouldNotBeFilled() {
 		Order order = new Order(ZIEMNIAKI, 51);
 

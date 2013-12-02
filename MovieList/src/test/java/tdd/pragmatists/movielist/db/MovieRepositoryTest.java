@@ -1,7 +1,5 @@
 package tdd.pragmatists.movielist.db;
 
-import static org.fest.assertions.Assertions.assertThat;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +8,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
+import static org.fest.assertions.Assertions.*;
+
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "file:src/main/resources/real-services.xml","file:src/test/resources/memoryDB.xml" })
+@ContextConfiguration(locations = { "classpath:real-services.xml","classpath:memoryDB.xml" })
 @Transactional
 @TransactionConfiguration(defaultRollback = true)
 public class MovieRepositoryTest {
@@ -27,8 +27,7 @@ public class MovieRepositoryTest {
 
 		Movie loadedMovie = movieRepository.findByName( "name").get(0);
 		assertThat(loadedMovie.id).isEqualTo(saved.id);
-		
-		System.out.println(movieRepository.count());
+		assertThat(movieRepository.count()).isEqualTo(1);
 	}
 
 

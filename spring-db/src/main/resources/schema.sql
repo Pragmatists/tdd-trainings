@@ -1,1 +1,0 @@
-create table HelloEntity(id varchar(255));

@@ -1,13 +1,5 @@
 package tdd.customerSearch;
 
-import static org.fest.assertions.api.Assertions.assertThat;
-import static org.fest.assertions.api.Assertions.extractProperty;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,6 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:jdbc-context.xml")
@@ -29,7 +25,12 @@ public class CustomerDaoTest {
     public void setUp() {
         dao = new CustomerDao(template);
     }
-    
+
+    @Test
+    public void firstTestGoesHere() {
+
+    }
+
     // --
     
     private void contact(String id, String firstname, String lastname, String street, String zipCode, String city, String country) {

@@ -8,7 +8,7 @@
 	<packaging>pom</packaging>
 	<version>1.0</version>
     <properties>
-        <spring.version>3.2.2.RELEASE</spring.version>
+        <spring.version>3.2.5.RELEASE</spring.version>
     </properties>
     <name>TDD Training examples</name>
 
@@ -41,7 +41,6 @@
 		<module>Assertions</module>
 		<module>Atm</module>
 		<module>CodeAnalyzer</module>
-		<module>Database</module>
 		<module>Displayer</module>
 		<module>Employee</module>
 		<module>FizzBuzz</module>
@@ -78,7 +77,7 @@
 		<dependency>
 			<groupId>pl.pragmatists</groupId>
 			<artifactId>JUnitParams</artifactId>
-			<version>1.0.1</version>
+			<version>1.0.2</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
