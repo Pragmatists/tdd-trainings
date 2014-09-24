@@ -1,7 +1,7 @@
 package params;
 
 import static junitparams.JUnitParamsRunner.$;
-import static org.fest.assertions.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 

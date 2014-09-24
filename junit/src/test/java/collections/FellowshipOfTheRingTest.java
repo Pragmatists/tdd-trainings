@@ -1,13 +1,14 @@
 package collections;
 
 import com.google.common.collect.Maps;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.fest.assertions.api.Assertions.assertThat;
-import static org.fest.assertions.api.Assertions.entry;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.entry;
 
 public class FellowshipOfTheRingTest {
 
@@ -15,6 +16,7 @@ public class FellowshipOfTheRingTest {
 
     // Asercje kontekstowe na obiektach pozwalają sprawdzać przynależność do kolekcji
     // TODO: Popraw skład drużyny aby test przeszedł
+    @Ignore
     @Test
     public void frodo_is_in() {
         assertThat(Frodo()).isIn(fellows);
@@ -22,6 +24,7 @@ public class FellowshipOfTheRingTest {
     }
 
     // Fest zawiera asercje specyficzne dla kolekcji i jeszcze bardziej specyficzne dla list
+    @Ignore
     @Test
     public void races_in_fellowship() {
         // dla jednego elfa mamy to samo co w poprzednim teście
@@ -36,6 +39,7 @@ public class FellowshipOfTheRingTest {
     }
 
     // nie zawsze interesuje nas sprawdzanie wszystkich pól obiektu
+    @Ignore
     @Test
     public void fellows_have_names() {
         Fellowship fellows = readFellowshipMembersFromTheBook();

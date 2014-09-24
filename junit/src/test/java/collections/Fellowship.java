@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import static ch.lambdaj.Lambda.*;
-import static org.fest.util.Lists.newArrayList;
+import static com.google.common.collect.Lists.newArrayList;
 import static org.hamcrest.CoreMatchers.is;
 
 public class Fellowship implements Iterable<Fellow> {

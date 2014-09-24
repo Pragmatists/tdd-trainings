@@ -1,9 +1,10 @@
 package forum;
 
-import static org.fest.assertions.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -23,6 +24,7 @@ public class ForumTest {
 		assertThat(forum.allPosts()).isEmpty();
 	}
 
+    @Ignore
 	@Test
 	public void userShouldBeAbleToAppendANewPost() {
 		// given
@@ -36,6 +38,7 @@ public class ForumTest {
 		assertThat(forum.allPosts()).containsOnly(post);
 	}
 
+    @Ignore
 	@Test
 	public void postsShouldBeListedDescendingByCreationDate() {
 		// given
@@ -51,6 +54,7 @@ public class ForumTest {
 		assertThat(allPosts).containsExactly(post3, post2, post1);
 	}
 
+    @Ignore
 	@Test
 	public void userShouldBeAbleToEditAPost() {
 		// given
@@ -65,6 +69,7 @@ public class ForumTest {
 		assertThat(forum.allPosts()).containsExactly(newPost);
 	}
 
+    @Ignore
 	@Test(expected = IllegalArgumentException.class)
 	public void userShouldNotBeAbleToEditAPostNotBelongingToTheForum() {
 		// given
