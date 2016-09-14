@@ -2,7 +2,7 @@ DependencyBreaking
 ==================
 
 1. `AuthenticationService` -> Parametrize Constructor
-2. `CartContoller` -> Adapt Parameter
+2. `CartController` -> Adapt Parameter
 3. `CustomerService` -> Introduce Static Setter
 4. `CustomerController` -> Encapsulate Global References
 5. `LoanCalculator` -> Extract and Override Call

@@ -5,11 +5,11 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-public class CartContoller {
+public class CartController {
 
     private ProductCatalog productCatalog;
 
-    private CartContoller(ProductCatalog productCatalog) {
+    private CartController(ProductCatalog productCatalog) {
         this.productCatalog = productCatalog;
     }
 
